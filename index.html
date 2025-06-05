@@ -3,57 +3,119 @@
   <head>
     <meta charset="utf-8">
     <title>Wina</title>
-    <!--Style Sheet-->
+    <!-- Wina Style Sheet -->
     <style type="text/css">
       body {
         min-height: 100vh;
-        background: linear-gradient(135deg, #111111 0%, #444444 100%);
+        background: linear-gradient(120deg, #16181d 0%, #444950 100%);
         margin: 0;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        padding: 20px;
-      }
-      
-      .glass {
-        width: 80%;
-        padding: 40px;
-        border-radius: 20px;
-        background: rgba(40, 40, 40, 0.4);
-        box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
-        backdrop-filter: blur(14px) saturate(130%);
-        -webkit-backdrop-filter: blur(14px) saturate(130%);
-        border: 1.5px solid rgba(255,255,255,0.15);
-        color: #ffffff;
-        text-align: center;
-        font-size: 1.25rem;
+        justify-content: flex-start;
+        color: #f5f6fa;
+        padding: 40px 10px 20px 10px;
+        font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+        gap: 32px;
       }
 
-      .link {
+      .glass {
+        width: 100%;
+        max-width: 540px;
+        margin: 18px auto;
+        padding: 36px 32px;
+        border-radius: 22px;
+        background: rgba(30, 32, 36, 0.35);
+        box-shadow: 0 8px 40px 0 rgba(31,38,135,0.20), 0 2px 8px 0 rgba(0,0,0,0.10);
+        backdrop-filter: blur(16px) saturate(150%);
+        -webkit-backdrop-filter: blur(16px) saturate(150%);
+        border: 1.5px solid rgba(255,255,255,0.12);
+        text-align: center;
+        font-size: 1.18rem;
+        transition: box-shadow 0.3s;
+      }
+      .glass:hover {
+        box-shadow: 0 16px 48px 0 rgba(31,38,135,0.25), 0 4px 12px 0 rgba(0,0,0,0.14);
+      }
+
+      h1 {
+        font-size: 2.3rem;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+        font-weight: 700;
+        background: linear-gradient(90deg, #8ec5fc, #e0c3fc, #00dbde, #fc00ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        margin-top: 0;
+      }
+      h2 {
+        font-size: 1.4rem;
+        color: #6dd5fa;
+        margin-bottom: 14px;
+        margin-top: 0;
+        letter-spacing: 1px;
+      }
+      .milestone {
+        margin: 0 0 12px 0;
+        font-size: 1.05rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .milestone-date {
+        color: #00dbde;
+        font-weight: 600;
+        font-family: 'Consolas', monospace;
+        letter-spacing: 1px;
+        min-width: 100px;
+        display: inline-block;
+      }
+      .milestone-desc {
+        flex: 1;
+        color: #f5f6fa;
+      }
+
+      .link-btn {
+        display: inline-block;
+        padding: 12px 34px;
+        margin-top: 12px;
+        font-size: 1.13rem;
+        font-weight: 600;
+        color: #fff;
+        background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
         border: none;
-        background-color: blue;
-        color: #ffffff;
-        border-radius: 10%;
+        border-radius: 14px;
+        box-shadow: 0 3px 18px 0 rgba(31,38,135,0.17);
+        cursor: pointer;
+        transition: background 0.3s, transform 0.18s;
+        outline: none;
+        text-decoration: none;
+        letter-spacing: 1px;
+      }
+      .link-btn:hover {
+        background: linear-gradient(90deg, #fc00ff 0%, #00dbde 100%);
+        transform: scale(1.045);
       }
     </style>
   </head>
 
   <body>
-    <div class="glass" style="text-align: center">
+    <div class="glass">
       <h1>Wina™ · Wina 005 团队</h1>
-      <p>Wina™ 是一个热爱编程的成员组成的团队</p>
+      <p>Wina™ 是由一群热爱编程的成员组成的团队，专注于创造有趣且有价值的应用。</p>
     </div>
 
-    <div class="glass" style="text-align: center">
+    <div class="glass">
       <h2>里程碑</h2>
-      <p><span class="color: skyblue">2025.5.12:&nbsp;</span>我们创建了一个汇聚着热爱编程的成员的团队</p>
-      <p><span class="color: skyblue">2025.5.30:&nbsp;</span>我们开始编写第一个应用——WorLumen</p>
+      <div class="milestone"><span class="milestone-date">2025.5.12</span><span class="milestone-desc">我们创建了一个汇聚着热爱编程成员的团队</span></div>
+      <div class="milestone"><span class="milestone-date">2025.5.30</span><span class="milestone-desc">我们开始编写第一个应用——WorLumen</span></div>
     </div>
 
-    <div class="glass" style="text-align: center">
+    <div class="glass">
       <h2>链接</h2>
-      <button class="link">立刻探索应用程序世界</button>
+      <a class="link-btn" href="#" target="_blank">立刻探索应用程序世界</a>
     </div>
   </body>
 </html>
